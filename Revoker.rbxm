@@ -1,0 +1,565 @@
+-- FUTURE RBXM SERIALIZATION
+-- Representación serializada del objeto.
+-- Un RBXM binario auténtico requiere un exportador compatible.
+
+{
+ Name = "Revoker",
+ ClassName = "Model",
+ Properties = {
+  ["Archivable"] = true,
+  ["Name"] = "Revoker",
+  ["ClassName"] = "Model",
+ }
+ Children = {
+  {
+   Name = "RushNew",
+   ClassName = "Part",
+   Properties = {
+    ["Shape"] = Enum.PartType.Ball,
+    ["CanQuery"] = true,
+    ["CanCollide"] = false,
+    ["Color"] = Color3.fromRGB(163,162,165),
+    ["Anchored"] = true,
+    ["CanTouch"] = true,
+    ["Position"] = Vector3.new(12,5.687823295593262,-37.5),
+    ["Reflectance"] = 0,
+    ["Transparency"] = 1,
+    ["Name"] = "RushNew",
+    ["ClassName"] = "Part",
+    ["Orientation"] = Vector3.new(0,-90,0),
+    ["Material"] = Enum.Material.Plastic,
+    ["Archivable"] = true,
+    ["Size"] = Vector3.new(7.375648021697998,7.375648021697998,7.375648021697998),
+   }
+   Children = {
+    {
+     Name = "Attachment",
+     ClassName = "Attachment",
+     Properties = {
+      ["Visible"] = false,
+      ["Name"] = "Attachment",
+      ["ClassName"] = "Attachment",
+      ["Orientation"] = Vector3.new(-0,0,0),
+      ["Archivable"] = true,
+      ["Position"] = Vector3.new(0,1.8169645071029663,0),
+     }
+     Children = {
+      {
+       Name = "Black",
+       ClassName = "ParticleEmitter",
+       Properties = {
+        ["Enabled"] = true,
+        ["Rate"] = 100,
+        ["Name"] = "Black",
+        ["ClassName"] = "ParticleEmitter",
+        ["Orientation"] = Enum.ParticleOrientation.FacingCamera,
+        ["Brightness"] = 3,
+        ["Archivable"] = true,
+        ["Shape"] = Enum.ParticleEmitterShape.Box,
+       }
+      }
+      {
+       Name = "ParticleEmitter",
+       ClassName = "ParticleEmitter",
+       Properties = {
+        ["Enabled"] = true,
+        ["Rate"] = 38,
+        ["Name"] = "ParticleEmitter",
+        ["ClassName"] = "ParticleEmitter",
+        ["Orientation"] = Enum.ParticleOrientation.FacingCamera,
+        ["Brightness"] = 1,
+        ["Archivable"] = true,
+        ["Shape"] = Enum.ParticleEmitterShape.Box,
+       }
+      }
+      {
+       Name = "PointLight",
+       ClassName = "PointLight",
+       Properties = {
+        ["Enabled"] = true,
+        ["Shadows"] = false,
+        ["Name"] = "PointLight",
+        ["ClassName"] = "PointLight",
+        ["Color"] = Color3.fromRGB(7,178,240),
+        ["Brightness"] = 8,
+        ["Archivable"] = true,
+        ["Range"] = 20,
+       }
+      }
+     }
+    }
+    {
+     Name = "fire",
+     ClassName = "ParticleEmitter",
+     Properties = {
+      ["Enabled"] = true,
+      ["Rate"] = 15,
+      ["Name"] = "fire",
+      ["ClassName"] = "ParticleEmitter",
+      ["Orientation"] = Enum.ParticleOrientation.FacingCamera,
+      ["Brightness"] = 33,
+      ["Archivable"] = true,
+      ["Shape"] = Enum.ParticleEmitterShape.Box,
+     }
+    }
+    {
+     Name = "TrailAttach",
+     ClassName = "Attachment",
+     Properties = {
+      ["Visible"] = false,
+      ["Name"] = "TrailAttach",
+      ["ClassName"] = "Attachment",
+      ["Orientation"] = Vector3.new(-0,0,0),
+      ["Archivable"] = true,
+      ["Position"] = Vector3.new(0,4.062344074249268,0),
+     }
+    }
+    {
+     Name = "lightning",
+     ClassName = "ParticleEmitter",
+     Properties = {
+      ["Enabled"] = true,
+      ["Rate"] = 7,
+      ["Name"] = "lightning",
+      ["ClassName"] = "ParticleEmitter",
+      ["Orientation"] = Enum.ParticleOrientation.FacingCamera,
+      ["Brightness"] = 10,
+      ["Archivable"] = true,
+      ["Shape"] = Enum.ParticleEmitterShape.Box,
+     }
+    }
+    {
+     Name = "Face&Trail",
+     ClassName = "Attachment",
+     Properties = {
+      ["Visible"] = false,
+      ["Name"] = "Face&Trail",
+      ["ClassName"] = "Attachment",
+      ["Orientation"] = Vector3.new(-0,0,0),
+      ["Archivable"] = true,
+      ["Position"] = Vector3.new(0,1.660333514213562,0),
+     }
+     Children = {
+      {
+       Name = "Smoke3",
+       ClassName = "ParticleEmitter",
+       Properties = {
+        ["Enabled"] = true,
+        ["Rate"] = 80,
+        ["Name"] = "Smoke3",
+        ["ClassName"] = "ParticleEmitter",
+        ["Orientation"] = Enum.ParticleOrientation.FacingCamera,
+        ["Brightness"] = 1,
+        ["Archivable"] = true,
+        ["Shape"] = Enum.ParticleEmitterShape.Box,
+       }
+      }
+      {
+       Name = "BigAura",
+       ClassName = "PointLight",
+       Properties = {
+        ["Enabled"] = true,
+        ["Shadows"] = true,
+        ["Name"] = "BigAura",
+        ["ClassName"] = "PointLight",
+        ["Color"] = Color3.fromRGB(0,85,255),
+        ["Brightness"] = 19.139999389648438,
+        ["Archivable"] = true,
+        ["Range"] = 40,
+       }
+      }
+      {
+       Name = "BlackTrail",
+       ClassName = "ParticleEmitter",
+       Properties = {
+        ["Enabled"] = false,
+        ["Rate"] = 15,
+        ["Name"] = "BlackTrail",
+        ["ClassName"] = "ParticleEmitter",
+        ["Orientation"] = Enum.ParticleOrientation.FacingCamera,
+        ["Brightness"] = 1,
+        ["Archivable"] = true,
+        ["Shape"] = Enum.ParticleEmitterShape.Box,
+       }
+      }
+      {
+       Name = "Smoke",
+       ClassName = "ParticleEmitter",
+       Properties = {
+        ["Enabled"] = true,
+        ["Rate"] = 80,
+        ["Name"] = "Smoke",
+        ["ClassName"] = "ParticleEmitter",
+        ["Orientation"] = Enum.ParticleOrientation.FacingCamera,
+        ["Brightness"] = 1,
+        ["Archivable"] = true,
+        ["Shape"] = Enum.ParticleEmitterShape.Box,
+       }
+      }
+      {
+       Name = "MediumBigAura",
+       ClassName = "PointLight",
+       Properties = {
+        ["Enabled"] = true,
+        ["Shadows"] = true,
+        ["Name"] = "MediumBigAura",
+        ["ClassName"] = "PointLight",
+        ["Color"] = Color3.fromRGB(0,0,255),
+        ["Brightness"] = 15.65999984741211,
+        ["Archivable"] = true,
+        ["Range"] = 24,
+       }
+      }
+      {
+       Name = "Face",
+       ClassName = "ParticleEmitter",
+       Properties = {
+        ["Enabled"] = true,
+        ["Rate"] = 460,
+        ["Name"] = "Face",
+        ["ClassName"] = "ParticleEmitter",
+        ["Orientation"] = Enum.ParticleOrientation.FacingCamera,
+        ["Brightness"] = 1,
+        ["Archivable"] = true,
+        ["Shape"] = Enum.ParticleEmitterShape.Box,
+       }
+      }
+      {
+       Name = "Smoke2",
+       ClassName = "ParticleEmitter",
+       Properties = {
+        ["Enabled"] = true,
+        ["Rate"] = 20,
+        ["Name"] = "Smoke2",
+        ["ClassName"] = "ParticleEmitter",
+        ["Orientation"] = Enum.ParticleOrientation.FacingCamera,
+        ["Brightness"] = 1,
+        ["Archivable"] = true,
+        ["Shape"] = Enum.ParticleEmitterShape.Box,
+       }
+      }
+      {
+       Name = "SmallBrightAura",
+       ClassName = "PointLight",
+       Properties = {
+        ["Enabled"] = true,
+        ["Shadows"] = true,
+        ["Name"] = "SmallBrightAura",
+        ["ClassName"] = "PointLight",
+        ["Color"] = Color3.fromRGB(0,0,255),
+        ["Brightness"] = 12212121,
+        ["Archivable"] = true,
+        ["Range"] = 6,
+       }
+      }
+     }
+    }
+    {
+     Name = "shards",
+     ClassName = "ParticleEmitter",
+     Properties = {
+      ["Enabled"] = true,
+      ["Rate"] = 13,
+      ["Name"] = "shards",
+      ["ClassName"] = "ParticleEmitter",
+      ["Orientation"] = Enum.ParticleOrientation.FacingCamera,
+      ["Brightness"] = 6,
+      ["Archivable"] = true,
+      ["Shape"] = Enum.ParticleEmitterShape.Box,
+     }
+    }
+    {
+     Name = "BubbleBig",
+     ClassName = "Attachment",
+     Properties = {
+      ["Visible"] = false,
+      ["Name"] = "BubbleBig",
+      ["ClassName"] = "Attachment",
+      ["Orientation"] = Vector3.new(-0,0,0),
+      ["Archivable"] = true,
+      ["Position"] = Vector3.new(0,0,0),
+     }
+     Children = {
+      {
+       Name = "ya",
+       ClassName = "ParticleEmitter",
+       Properties = {
+        ["Enabled"] = true,
+        ["Rate"] = 21,
+        ["Name"] = "ya",
+        ["ClassName"] = "ParticleEmitter",
+        ["Orientation"] = Enum.ParticleOrientation.FacingCamera,
+        ["Brightness"] = 1,
+        ["Archivable"] = true,
+        ["Shape"] = Enum.ParticleEmitterShape.Box,
+       }
+      }
+      {
+       Name = "long lasting firefly",
+       ClassName = "ParticleEmitter",
+       Properties = {
+        ["Enabled"] = true,
+        ["Rate"] = 40,
+        ["Name"] = "long lasting firefly",
+        ["ClassName"] = "ParticleEmitter",
+        ["Orientation"] = Enum.ParticleOrientation.VelocityParallel,
+        ["Brightness"] = 33,
+        ["Archivable"] = true,
+        ["Shape"] = Enum.ParticleEmitterShape.Box,
+       }
+      }
+      {
+       Name = "black smoke",
+       ClassName = "ParticleEmitter",
+       Properties = {
+        ["Enabled"] = true,
+        ["Rate"] = 30,
+        ["Name"] = "black smoke",
+        ["ClassName"] = "ParticleEmitter",
+        ["Orientation"] = Enum.ParticleOrientation.FacingCamera,
+        ["Brightness"] = 7,
+        ["Archivable"] = true,
+        ["Shape"] = Enum.ParticleEmitterShape.Box,
+       }
+      }
+     }
+    }
+    {
+     Name = "Attachment",
+     ClassName = "Attachment",
+     Properties = {
+      ["Visible"] = false,
+      ["Name"] = "Attachment",
+      ["ClassName"] = "Attachment",
+      ["Orientation"] = Vector3.new(-0,0,0),
+      ["Archivable"] = true,
+      ["Position"] = Vector3.new(0,2.029391050338745,0),
+     }
+     Children = {
+      {
+       Name = "ya",
+       ClassName = "ParticleEmitter",
+       Properties = {
+        ["Enabled"] = true,
+        ["Rate"] = 21,
+        ["Name"] = "ya",
+        ["ClassName"] = "ParticleEmitter",
+        ["Orientation"] = Enum.ParticleOrientation.FacingCamera,
+        ["Brightness"] = 1,
+        ["Archivable"] = true,
+        ["Shape"] = Enum.ParticleEmitterShape.Box,
+       }
+      }
+      {
+       Name = "BlackTrail",
+       ClassName = "ParticleEmitter",
+       Properties = {
+        ["Enabled"] = true,
+        ["Rate"] = 15,
+        ["Name"] = "BlackTrail",
+        ["ClassName"] = "ParticleEmitter",
+        ["Orientation"] = Enum.ParticleOrientation.FacingCamera,
+        ["Brightness"] = 1,
+        ["Archivable"] = true,
+        ["Shape"] = Enum.ParticleEmitterShape.Box,
+       }
+      }
+      {
+       Name = "Smoke",
+       ClassName = "ParticleEmitter",
+       Properties = {
+        ["Enabled"] = true,
+        ["Rate"] = 80,
+        ["Name"] = "Smoke",
+        ["ClassName"] = "ParticleEmitter",
+        ["Orientation"] = Enum.ParticleOrientation.FacingCamera,
+        ["Brightness"] = 1,
+        ["Archivable"] = true,
+        ["Shape"] = Enum.ParticleEmitterShape.Box,
+       }
+      }
+      {
+       Name = "PointLight2",
+       ClassName = "PointLight",
+       Properties = {
+        ["Enabled"] = true,
+        ["Shadows"] = true,
+        ["Name"] = "PointLight2",
+        ["ClassName"] = "PointLight",
+        ["Color"] = Color3.fromRGB(72,0,255),
+        ["Brightness"] = 40,
+        ["Archivable"] = true,
+        ["Range"] = 12,
+       }
+      }
+      {
+       Name = "PointLight",
+       ClassName = "PointLight",
+       Properties = {
+        ["Enabled"] = true,
+        ["Shadows"] = true,
+        ["Name"] = "PointLight",
+        ["ClassName"] = "PointLight",
+        ["Color"] = Color3.fromRGB(0,255,238),
+        ["Brightness"] = 10,
+        ["Archivable"] = true,
+        ["Range"] = 23,
+       }
+      }
+      {
+       Name = "Black",
+       ClassName = "ParticleEmitter",
+       Properties = {
+        ["Enabled"] = true,
+        ["Rate"] = 25,
+        ["Name"] = "Black",
+        ["ClassName"] = "ParticleEmitter",
+        ["Orientation"] = Enum.ParticleOrientation.FacingCamera,
+        ["Brightness"] = 1,
+        ["Archivable"] = true,
+        ["Shape"] = Enum.ParticleEmitterShape.Box,
+       }
+      }
+     }
+    }
+    {
+     Name = "Static",
+     ClassName = "Sound",
+     Properties = {
+      ["PlaybackSpeed"] = 0.800000011920929,
+      ["TimePosition"] = 8.193,
+      ["Name"] = "Static",
+      ["ClassName"] = "Sound",
+      ["SoundId"] = "rbxassetid://4443370219",
+      ["Looped"] = true,
+      ["Archivable"] = true,
+      ["Volume"] = 0.5,
+     }
+     Children = {
+      {
+       Name = "DistortionSoundEffect",
+       ClassName = "DistortionSoundEffect",
+       Properties = {
+        ["Enabled"] = true,
+        ["Archivable"] = true,
+        ["Name"] = "DistortionSoundEffect",
+        ["ClassName"] = "DistortionSoundEffect",
+       }
+      }
+      {
+       Name = "PitchShiftSoundEffect",
+       ClassName = "PitchShiftSoundEffect",
+       Properties = {
+        ["Enabled"] = true,
+        ["Archivable"] = true,
+        ["Name"] = "PitchShiftSoundEffect",
+        ["ClassName"] = "PitchShiftSoundEffect",
+       }
+      }
+     }
+    }
+    {
+     Name = "TrailAttach",
+     ClassName = "Attachment",
+     Properties = {
+      ["Visible"] = false,
+      ["Name"] = "TrailAttach",
+      ["ClassName"] = "Attachment",
+      ["Orientation"] = Vector3.new(-0,0,0),
+      ["Archivable"] = true,
+      ["Position"] = Vector3.new(0,-0.6126563549041748,0),
+     }
+    }
+    {
+     Name = "BubbleSmall",
+     ClassName = "Attachment",
+     Properties = {
+      ["Visible"] = false,
+      ["Name"] = "BubbleSmall",
+      ["ClassName"] = "Attachment",
+      ["Orientation"] = Vector3.new(-0,0,0),
+      ["Archivable"] = true,
+      ["Position"] = Vector3.new(0,2.114800214767456,0),
+     }
+    }
+    {
+     Name = "CamAttach",
+     ClassName = "Attachment",
+     Properties = {
+      ["Visible"] = false,
+      ["Name"] = "CamAttach",
+      ["ClassName"] = "Attachment",
+      ["Orientation"] = Vector3.new(-0,180,0),
+      ["Archivable"] = true,
+      ["Position"] = Vector3.new(0,2.5765814781188965,-7.815705299377441),
+     }
+    }
+    {
+     Name = "TrailAttach",
+     ClassName = "Attachment",
+     Properties = {
+      ["Visible"] = false,
+      ["Name"] = "TrailAttach",
+      ["ClassName"] = "Attachment",
+      ["Orientation"] = Vector3.new(-0,0,0),
+      ["Archivable"] = true,
+      ["Position"] = Vector3.new(-1.0484925508499146,1.6146018505096436,0),
+     }
+     Children = {
+      {
+       Name = "Smoke",
+       ClassName = "ParticleEmitter",
+       Properties = {
+        ["Enabled"] = true,
+        ["Rate"] = 80,
+        ["Name"] = "Smoke",
+        ["ClassName"] = "ParticleEmitter",
+        ["Orientation"] = Enum.ParticleOrientation.FacingCamera,
+        ["Brightness"] = 1,
+        ["Archivable"] = true,
+        ["Shape"] = Enum.ParticleEmitterShape.Box,
+       }
+      }
+      {
+       Name = "Black",
+       ClassName = "ParticleEmitter",
+       Properties = {
+        ["Enabled"] = true,
+        ["Rate"] = 100,
+        ["Name"] = "Black",
+        ["ClassName"] = "ParticleEmitter",
+        ["Orientation"] = Enum.ParticleOrientation.FacingCamera,
+        ["Brightness"] = 1,
+        ["Archivable"] = true,
+        ["Shape"] = Enum.ParticleEmitterShape.Box,
+       }
+      }
+     }
+    }
+    {
+     Name = "FaceAttach",
+     ClassName = "Attachment",
+     Properties = {
+      ["Visible"] = false,
+      ["Name"] = "FaceAttach",
+      ["ClassName"] = "Attachment",
+      ["Orientation"] = Vector3.new(-0,0,0),
+      ["Archivable"] = true,
+      ["Position"] = Vector3.new(0,2.6518256664276123,0),
+     }
+    }
+    {
+     Name = "HAHAHAHAHHAAAHAHAHAHAHHAHAHAHAHA",
+     ClassName = "HingeConstraint",
+     Properties = {
+      ["Enabled"] = true,
+      ["Name"] = "HAHAHAHAHHAAAHAHAHAHAHHAHAHAHAHA",
+      ["ClassName"] = "HingeConstraint",
+      ["Archivable"] = true,
+      ["Visible"] = false,
+     }
+    }
+   }
+  }
+ }
+}

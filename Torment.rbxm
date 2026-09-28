@@ -1,0 +1,472 @@
+-- FUTURE RBXM SERIALIZATION
+-- Representación serializada del objeto.
+-- Un RBXM binario auténtico requiere un exportador compatible.
+
+{
+ Name = "Torment",
+ ClassName = "Model",
+ Properties = {
+  ["Archivable"] = true,
+  ["Name"] = "Torment",
+  ["ClassName"] = "Model",
+ }
+ Children = {
+  {
+   Name = "Main",
+   ClassName = "Part",
+   Properties = {
+    ["Shape"] = Enum.PartType.Ball,
+    ["CanQuery"] = false,
+    ["CanCollide"] = false,
+    ["Color"] = Color3.fromRGB(163,162,165),
+    ["Anchored"] = true,
+    ["CanTouch"] = false,
+    ["Position"] = Vector3.new(17.5,6,-11),
+    ["Reflectance"] = 0,
+    ["Transparency"] = 1,
+    ["Name"] = "Main",
+    ["ClassName"] = "Part",
+    ["Orientation"] = Vector3.new(0,0,0),
+    ["Material"] = Enum.Material.Plastic,
+    ["Archivable"] = true,
+    ["Size"] = Vector3.new(10.080001831054688,10.080001831054688,10.080001831054688),
+   }
+   Children = {
+    {
+     Name = "Kill",
+     ClassName = "Sound",
+     Properties = {
+      ["PlaybackSpeed"] = 3,
+      ["TimePosition"] = 0,
+      ["Name"] = "Kill",
+      ["ClassName"] = "Sound",
+      ["SoundId"] = "rbxassetid://5263560896",
+      ["Looped"] = false,
+      ["Archivable"] = true,
+      ["Volume"] = 0.10000000149011612,
+     }
+     Children = {
+      {
+       Name = "DistortionSoundEffect",
+       ClassName = "DistortionSoundEffect",
+       Properties = {
+        ["Enabled"] = true,
+        ["Archivable"] = true,
+        ["Name"] = "DistortionSoundEffect",
+        ["ClassName"] = "DistortionSoundEffect",
+       }
+      }
+      {
+       Name = "PitchShiftSoundEffect",
+       ClassName = "PitchShiftSoundEffect",
+       Properties = {
+        ["Enabled"] = true,
+        ["Archivable"] = true,
+        ["Name"] = "PitchShiftSoundEffect",
+        ["ClassName"] = "PitchShiftSoundEffect",
+       }
+      }
+      {
+       Name = "TremoloSoundEffect",
+       ClassName = "TremoloSoundEffect",
+       Properties = {
+        ["Enabled"] = true,
+        ["Archivable"] = true,
+        ["Name"] = "TremoloSoundEffect",
+        ["ClassName"] = "TremoloSoundEffect",
+       }
+      }
+      {
+       Name = "FlangeSoundEffect",
+       ClassName = "FlangeSoundEffect",
+       Properties = {
+        ["Enabled"] = true,
+        ["Name"] = "FlangeSoundEffect",
+        ["ClassName"] = "FlangeSoundEffect",
+        ["Archivable"] = true,
+        ["Rate"] = 0.20000000298023224,
+       }
+      }
+     }
+    }
+    {
+     Name = "Scream",
+     ClassName = "Sound",
+     Properties = {
+      ["PlaybackSpeed"] = 0.44999998807907104,
+      ["TimePosition"] = 0,
+      ["Name"] = "Scream",
+      ["ClassName"] = "Sound",
+      ["SoundId"] = "rbxassetid://5263560566",
+      ["Looped"] = false,
+      ["Archivable"] = true,
+      ["Volume"] = 0.20000000298023224,
+     }
+     Children = {
+      {
+       Name = "DistortionSoundEffect",
+       ClassName = "DistortionSoundEffect",
+       Properties = {
+        ["Enabled"] = true,
+        ["Archivable"] = true,
+        ["Name"] = "DistortionSoundEffect",
+        ["ClassName"] = "DistortionSoundEffect",
+       }
+      }
+      {
+       Name = "EqualizerSoundEffect",
+       ClassName = "EqualizerSoundEffect",
+       Properties = {
+        ["Enabled"] = true,
+        ["Archivable"] = true,
+        ["Name"] = "EqualizerSoundEffect",
+        ["ClassName"] = "EqualizerSoundEffect",
+       }
+      }
+      {
+       Name = "TremoloSoundEffect",
+       ClassName = "TremoloSoundEffect",
+       Properties = {
+        ["Enabled"] = true,
+        ["Archivable"] = true,
+        ["Name"] = "TremoloSoundEffect",
+        ["ClassName"] = "TremoloSoundEffect",
+       }
+      }
+      {
+       Name = "FlangeSoundEffect",
+       ClassName = "FlangeSoundEffect",
+       Properties = {
+        ["Enabled"] = true,
+        ["Name"] = "FlangeSoundEffect",
+        ["ClassName"] = "FlangeSoundEffect",
+        ["Archivable"] = true,
+        ["Rate"] = 0.800000011920929,
+       }
+      }
+     }
+    }
+    {
+     Name = "BeamTop",
+     ClassName = "Attachment",
+     Properties = {
+      ["Visible"] = false,
+      ["Name"] = "BeamTop",
+      ["ClassName"] = "Attachment",
+      ["Orientation"] = Vector3.new(0,-180,-90),
+      ["Archivable"] = true,
+      ["Position"] = Vector3.new(-0.03633574768900871,1.4656323194503784,0.00001230468933499651),
+     }
+    }
+    {
+     Name = "BodyVelocity",
+     ClassName = "BodyVelocity",
+     Properties = {
+      ["Archivable"] = true,
+      ["Name"] = "BodyVelocity",
+      ["ClassName"] = "BodyVelocity",
+     }
+    }
+    {
+     Name = "Knock",
+     ClassName = "Sound",
+     Properties = {
+      ["PlaybackSpeed"] = 0.800000011920929,
+      ["TimePosition"] = 0,
+      ["Name"] = "Knock",
+      ["ClassName"] = "Sound",
+      ["SoundId"] = "rbxassetid://5579533230",
+      ["Looped"] = false,
+      ["Archivable"] = true,
+      ["Volume"] = 0.4000000059604645,
+     }
+     Children = {
+      {
+       Name = "DistortionSoundEffect",
+       ClassName = "DistortionSoundEffect",
+       Properties = {
+        ["Enabled"] = true,
+        ["Archivable"] = true,
+        ["Name"] = "DistortionSoundEffect",
+        ["ClassName"] = "DistortionSoundEffect",
+       }
+      }
+      {
+       Name = "EqualizerSoundEffect",
+       ClassName = "EqualizerSoundEffect",
+       Properties = {
+        ["Enabled"] = true,
+        ["Archivable"] = true,
+        ["Name"] = "EqualizerSoundEffect",
+        ["ClassName"] = "EqualizerSoundEffect",
+       }
+      }
+      {
+       Name = "TremoloSoundEffect",
+       ClassName = "TremoloSoundEffect",
+       Properties = {
+        ["Enabled"] = true,
+        ["Archivable"] = true,
+        ["Name"] = "TremoloSoundEffect",
+        ["ClassName"] = "TremoloSoundEffect",
+       }
+      }
+      {
+       Name = "FlangeSoundEffect",
+       ClassName = "FlangeSoundEffect",
+       Properties = {
+        ["Enabled"] = true,
+        ["Name"] = "FlangeSoundEffect",
+        ["ClassName"] = "FlangeSoundEffect",
+        ["Archivable"] = true,
+        ["Rate"] = 0.20000000298023224,
+       }
+      }
+     }
+    }
+    {
+     Name = "Footsteps",
+     ClassName = "Sound",
+     Properties = {
+      ["PlaybackSpeed"] = 0.33000001311302185,
+      ["TimePosition"] = 0.551,
+      ["Name"] = "Footsteps",
+      ["ClassName"] = "Sound",
+      ["SoundId"] = "rbxassetid://4860560167",
+      ["Looped"] = true,
+      ["Archivable"] = true,
+      ["Volume"] = 1,
+     }
+     Children = {
+      {
+       Name = "PitchShiftSoundEffect",
+       ClassName = "PitchShiftSoundEffect",
+       Properties = {
+        ["Enabled"] = false,
+        ["Archivable"] = true,
+        ["Name"] = "PitchShiftSoundEffect",
+        ["ClassName"] = "PitchShiftSoundEffect",
+       }
+      }
+      {
+       Name = "EqualizerSoundEffect",
+       ClassName = "EqualizerSoundEffect",
+       Properties = {
+        ["Enabled"] = true,
+        ["Archivable"] = true,
+        ["Name"] = "EqualizerSoundEffect",
+        ["ClassName"] = "EqualizerSoundEffect",
+       }
+      }
+     }
+    }
+    {
+     Name = "Mesh",
+     ClassName = "SpecialMesh",
+     Properties = {
+      ["Name"] = "Mesh",
+      ["ClassName"] = "SpecialMesh",
+      ["Scale"] = Vector3.new(1,1,1),
+      ["MeshId"] = "",
+      ["Archivable"] = true,
+     }
+    }
+    {
+     Name = "Repent",
+     ClassName = "Sound",
+     Properties = {
+      ["PlaybackSpeed"] = 0.6000000238418579,
+      ["TimePosition"] = 0,
+      ["Name"] = "Repent",
+      ["ClassName"] = "Sound",
+      ["SoundId"] = "rbxassetid://5263560896",
+      ["Looped"] = false,
+      ["Archivable"] = true,
+      ["Volume"] = 0.30000001192092896,
+     }
+     Children = {
+      {
+       Name = "DistortionSoundEffect",
+       ClassName = "DistortionSoundEffect",
+       Properties = {
+        ["Enabled"] = true,
+        ["Archivable"] = true,
+        ["Name"] = "DistortionSoundEffect",
+        ["ClassName"] = "DistortionSoundEffect",
+       }
+      }
+      {
+       Name = "EqualizerSoundEffect",
+       ClassName = "EqualizerSoundEffect",
+       Properties = {
+        ["Enabled"] = true,
+        ["Archivable"] = true,
+        ["Name"] = "EqualizerSoundEffect",
+        ["ClassName"] = "EqualizerSoundEffect",
+       }
+      }
+      {
+       Name = "TremoloSoundEffect",
+       ClassName = "TremoloSoundEffect",
+       Properties = {
+        ["Enabled"] = true,
+        ["Archivable"] = true,
+        ["Name"] = "TremoloSoundEffect",
+        ["ClassName"] = "TremoloSoundEffect",
+       }
+      }
+      {
+       Name = "FlangeSoundEffect",
+       ClassName = "FlangeSoundEffect",
+       Properties = {
+        ["Enabled"] = true,
+        ["Name"] = "FlangeSoundEffect",
+        ["ClassName"] = "FlangeSoundEffect",
+        ["Archivable"] = true,
+        ["Rate"] = 0.800000011920929,
+       }
+      }
+     }
+    }
+    {
+     Name = "LightAttach",
+     ClassName = "Attachment",
+     Properties = {
+      ["Visible"] = false,
+      ["Name"] = "LightAttach",
+      ["ClassName"] = "Attachment",
+      ["Orientation"] = Vector3.new(0,-180,-90),
+      ["Archivable"] = true,
+      ["Position"] = Vector3.new(0,0,0),
+     }
+     Children = {
+      {
+       Name = "ParticleEmitter2",
+       ClassName = "ParticleEmitter",
+       Properties = {
+        ["Enabled"] = true,
+        ["Rate"] = 200000,
+        ["Name"] = "ParticleEmitter2",
+        ["ClassName"] = "ParticleEmitter",
+        ["Orientation"] = Enum.ParticleOrientation.FacingCamera,
+        ["Brightness"] = 5,
+        ["Archivable"] = true,
+        ["Shape"] = Enum.ParticleEmitterShape.Box,
+       }
+      }
+      {
+       Name = "PointLight",
+       ClassName = "PointLight",
+       Properties = {
+        ["Enabled"] = true,
+        ["Shadows"] = false,
+        ["Name"] = "PointLight",
+        ["ClassName"] = "PointLight",
+        ["Color"] = Color3.fromRGB(255,108,255),
+        ["Brightness"] = 5,
+        ["Archivable"] = true,
+        ["Range"] = 60,
+       }
+      }
+      {
+       Name = "ParticleEmitter",
+       ClassName = "ParticleEmitter",
+       Properties = {
+        ["Enabled"] = true,
+        ["Rate"] = 99999997952,
+        ["Name"] = "ParticleEmitter",
+        ["ClassName"] = "ParticleEmitter",
+        ["Orientation"] = Enum.ParticleOrientation.VelocityPerpendicular,
+        ["Brightness"] = 2,
+        ["Archivable"] = true,
+        ["Shape"] = Enum.ParticleEmitterShape.Box,
+       }
+      }
+     }
+    }
+    {
+     Name = "Static...",
+     ClassName = "Sound",
+     Properties = {
+      ["PlaybackSpeed"] = 1,
+      ["TimePosition"] = 13.859,
+      ["Name"] = "Static...",
+      ["ClassName"] = "Sound",
+      ["SoundId"] = "rbxassetid://6111244462",
+      ["Looped"] = true,
+      ["Archivable"] = true,
+      ["Volume"] = 3,
+     }
+     Children = {
+      {
+       Name = "DistortionSoundEffect",
+       ClassName = "DistortionSoundEffect",
+       Properties = {
+        ["Enabled"] = true,
+        ["Archivable"] = true,
+        ["Name"] = "DistortionSoundEffect",
+        ["ClassName"] = "DistortionSoundEffect",
+       }
+      }
+      {
+       Name = "PitchShiftSoundEffect",
+       ClassName = "PitchShiftSoundEffect",
+       Properties = {
+        ["Enabled"] = true,
+        ["Archivable"] = true,
+        ["Name"] = "PitchShiftSoundEffect",
+        ["ClassName"] = "PitchShiftSoundEffect",
+       }
+      }
+     }
+    }
+    {
+     Name = "Beam",
+     ClassName = "Beam",
+     Properties = {
+      ["Enabled"] = false,
+      ["Name"] = "Beam",
+      ["ClassName"] = "Beam",
+      ["Brightness"] = 12,
+      ["Archivable"] = true,
+     }
+    }
+    {
+     Name = "BodyGyro",
+     ClassName = "BodyGyro",
+     Properties = {
+      ["Archivable"] = true,
+      ["Name"] = "BodyGyro",
+      ["ClassName"] = "BodyGyro",
+     }
+    }
+    {
+     Name = "ParticleEmitter3",
+     ClassName = "ParticleEmitter",
+     Properties = {
+      ["Enabled"] = true,
+      ["Rate"] = 45,
+      ["Name"] = "ParticleEmitter3",
+      ["ClassName"] = "ParticleEmitter",
+      ["Orientation"] = Enum.ParticleOrientation.FacingCamera,
+      ["Brightness"] = 1,
+      ["Archivable"] = true,
+      ["Shape"] = Enum.ParticleEmitterShape.Box,
+     }
+    }
+    {
+     Name = "BeamBottom",
+     ClassName = "Attachment",
+     Properties = {
+      ["Visible"] = false,
+      ["Name"] = "BeamBottom",
+      ["ClassName"] = "Attachment",
+      ["Orientation"] = Vector3.new(0,-180,-90),
+      ["Archivable"] = true,
+      ["Position"] = Vector3.new(-0.03633574768900871,-1.5368387699127197,0.00001230468933499651),
+     }
+    }
+   }
+  }
+ }
+}

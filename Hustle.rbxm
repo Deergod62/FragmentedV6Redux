@@ -1,0 +1,173 @@
+-- FUTURE RBXM SERIALIZATION
+-- Representación serializada del objeto.
+-- Un RBXM binario auténtico requiere un exportador compatible.
+
+{
+ Name = "Hustle",
+ ClassName = "Model",
+ Properties = {
+  ["Archivable"] = true,
+  ["Name"] = "Hustle",
+  ["ClassName"] = "Model",
+ }
+ Children = {
+  {
+   Name = "FallacyNew",
+   ClassName = "Part",
+   Properties = {
+    ["Shape"] = Enum.PartType.Block,
+    ["CanQuery"] = true,
+    ["CanCollide"] = false,
+    ["Color"] = Color3.fromRGB(229,228,223),
+    ["Anchored"] = true,
+    ["CanTouch"] = true,
+    ["Position"] = Vector3.new(133.4117889404297,14.00792407989502,-31.456911087036133),
+    ["Reflectance"] = 0,
+    ["Transparency"] = 1,
+    ["Name"] = "FallacyNew",
+    ["ClassName"] = "Part",
+    ["Orientation"] = Vector3.new(0,2.259999990463257,0),
+    ["Material"] = Enum.Material.Plastic,
+    ["Archivable"] = true,
+    ["Size"] = Vector3.new(7,7,7),
+   }
+   Children = {
+    {
+     Name = "Attachment2",
+     ClassName = "Attachment",
+     Properties = {
+      ["Visible"] = false,
+      ["Name"] = "Attachment2",
+      ["ClassName"] = "Attachment",
+      ["Orientation"] = Vector3.new(-0,0,0),
+      ["Archivable"] = true,
+      ["Position"] = Vector3.new(0.00006103515625,1.459420919418335,-0.155029296875),
+     }
+     Children = {
+      {
+       Name = "PointLight",
+       ClassName = "PointLight",
+       Properties = {
+        ["Enabled"] = true,
+        ["Shadows"] = true,
+        ["Name"] = "PointLight",
+        ["ClassName"] = "PointLight",
+        ["Color"] = Color3.fromRGB(255,255,0),
+        ["Brightness"] = 460,
+        ["Archivable"] = true,
+        ["Range"] = 40,
+       }
+      }
+      {
+       Name = "ParticleEmitter",
+       ClassName = "ParticleEmitter",
+       Properties = {
+        ["Enabled"] = true,
+        ["Rate"] = 240,
+        ["Name"] = "ParticleEmitter",
+        ["ClassName"] = "ParticleEmitter",
+        ["Orientation"] = Enum.ParticleOrientation.FacingCamera,
+        ["Brightness"] = 1,
+        ["Archivable"] = true,
+        ["Shape"] = Enum.ParticleEmitterShape.Box,
+       }
+      }
+     }
+    }
+    {
+     Name = "Attachment",
+     ClassName = "Attachment",
+     Properties = {
+      ["Visible"] = false,
+      ["Name"] = "Attachment",
+      ["ClassName"] = "Attachment",
+      ["Orientation"] = Vector3.new(0,0,90),
+      ["Archivable"] = true,
+      ["Position"] = Vector3.new(-0.45587158203125,3.497577667236328,0),
+     }
+    }
+    {
+     Name = "PlaySound",
+     ClassName = "Sound",
+     Properties = {
+      ["PlaybackSpeed"] = 0.009999999776482582,
+      ["TimePosition"] = 0.854,
+      ["Name"] = "PlaySound",
+      ["ClassName"] = "Sound",
+      ["SoundId"] = "rbxassetid://3359047385",
+      ["Looped"] = true,
+      ["Archivable"] = true,
+      ["Volume"] = 4,
+     }
+     Children = {
+      {
+       Name = "DistortionSoundEffect",
+       ClassName = "DistortionSoundEffect",
+       Properties = {
+        ["Enabled"] = true,
+        ["Archivable"] = true,
+        ["Name"] = "DistortionSoundEffect",
+        ["ClassName"] = "DistortionSoundEffect",
+       }
+      }
+      {
+       Name = "FlangeSoundEffect",
+       ClassName = "FlangeSoundEffect",
+       Properties = {
+        ["Enabled"] = true,
+        ["Name"] = "FlangeSoundEffect",
+        ["ClassName"] = "FlangeSoundEffect",
+        ["Archivable"] = true,
+        ["Rate"] = 0.20000000298023224,
+       }
+      }
+      {
+       Name = "EchoSoundEffect",
+       ClassName = "EchoSoundEffect",
+       Properties = {
+        ["Enabled"] = true,
+        ["Archivable"] = true,
+        ["Name"] = "EchoSoundEffect",
+        ["ClassName"] = "EchoSoundEffect",
+       }
+      }
+      {
+       Name = "TremoloSoundEffect",
+       ClassName = "TremoloSoundEffect",
+       Properties = {
+        ["Enabled"] = true,
+        ["Archivable"] = true,
+        ["Name"] = "TremoloSoundEffect",
+        ["ClassName"] = "TremoloSoundEffect",
+       }
+      }
+      {
+       Name = "EqualizerSoundEffect",
+       ClassName = "EqualizerSoundEffect",
+       Properties = {
+        ["Enabled"] = true,
+        ["Archivable"] = true,
+        ["Name"] = "EqualizerSoundEffect",
+        ["ClassName"] = "EqualizerSoundEffect",
+       }
+      }
+     }
+    }
+   }
+  }
+  {
+   Name = "Spawn",
+   ClassName = "Sound",
+   Properties = {
+    ["PlaybackSpeed"] = 1,
+    ["TimePosition"] = 0,
+    ["Name"] = "Spawn",
+    ["ClassName"] = "Sound",
+    ["SoundId"] = "rbxassetid://3359047385",
+    ["Looped"] = false,
+    ["Archivable"] = true,
+    ["Volume"] = 5,
+   }
+  }
+ }
+}

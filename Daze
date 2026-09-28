@@ -1,0 +1,341 @@
+local Players = game:GetService("Players")
+local Workspace = game:GetService("Workspace")
+local RunService = game:GetService("RunService")
+local Debris = game:GetService("Debris")
+
+local player = Players.LocalPlayer
+local camera = Workspace.CurrentCamera
+
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoid = character:WaitForChild("Humanoid")
+local root = character:WaitForChild("HumanoidRootPart")
+
+local DAZE_ID = "rbxassetid://140220823108130"
+
+local SPAWN_DISTANCE = 8
+local LOOK_TIME = 2
+local ATTACK_SPEED = 50
+local ATTACK_DISTANCE = 3
+local DAMAGE = 28
+
+-- IMPORTAR DAZE
+local success, objects = pcall(function()
+	return game:GetObjects(DAZE_ID)
+end)
+
+if not success or not objects or not objects[1] then
+	warn("No se pudo importar Daze.")
+	return
+end
+
+local daze = objects[1]
+daze.Name = "Daze"
+daze.Parent = Workspace
+
+-- PRIMARY PART
+local primary = daze.PrimaryPart
+
+if not primary then
+	primary = daze:FindFirstChildWhichIsA("BasePart", true)
+end
+
+if not primary then
+	warn("Daze no tiene ninguna BasePart.")
+	daze:Destroy()
+	return
+end
+
+daze.PrimaryPart = primary
+
+-- OOGA BOOGAAAA > jumpscare
+local oogaBoogaa = daze:FindFirstChild("OOGA BOOGAAAA", true)
+local jumpscare = nil
+
+if oogaBoogaa then
+	jumpscare = oogaBoogaa:FindFirstChild("jumpscare", true)
+end
+
+if jumpscare and not jumpscare:IsA("Sound") then
+	jumpscare = nil
+end
+
+-- POSICIÓN INICIAL
+local lookVector = camera.CFrame.LookVector
+
+local flatLook = Vector3.new(
+	lookVector.X,
+	0,
+	lookVector.Z
+)
+
+if flatLook.Magnitude < 0.01 then
+	flatLook = Vector3.new(0, 0, -1)
+else
+	flatLook = flatLook.Unit
+end
+
+local spawnPosition = root.Position + flatLook * SPAWN_DISTANCE
+
+spawnPosition = Vector3.new(
+	spawnPosition.X,
+	root.Position.Y,
+	spawnPosition.Z
+)
+
+daze:PivotTo(
+	CFrame.lookAt(
+		spawnPosition,
+		root.Position
+	)
+)
+
+-- ESTADO INICIAL
+for _, object in ipairs(daze:GetDescendants()) do
+	if object:IsA("BasePart") then
+		object.Anchored = true
+		object.CanCollide = true
+	end
+end
+
+local lookTime = 0
+local attacking = false
+local finished = false
+
+-- QUITAR COLISIÓN
+local function removeCollision()
+	if not daze or not daze.Parent then
+		return
+	end
+
+	for _, object in ipairs(daze:GetDescendants()) do
+		if object:IsA("BasePart") then
+			object.CanCollide = false
+		end
+	end
+end
+
+-- DP
+local function DP()
+	if finished then
+		return
+	end
+
+	finished = true
+
+	if not daze or not daze.Parent then
+		return
+	end
+
+	for _, object in ipairs(daze:GetDescendants()) do
+		if object:IsA("BasePart") then
+			object.CanCollide = false
+			object.Anchored = false
+		end
+	end
+
+	Debris:AddItem(daze, 2)
+end
+
+-- COMPROBAR MIRADA
+local function isLookingAtDaze()
+	if not daze or not daze.Parent then
+		return false
+	end
+
+	if not primary or not primary.Parent then
+		return false
+	end
+
+	local direction =
+		primary.Position - camera.CFrame.Position
+
+	if direction.Magnitude < 0.01 then
+		return false
+	end
+
+	local dot =
+		camera.CFrame.LookVector:Dot(direction.Unit)
+
+	return dot >= 0.95
+end
+
+-- ATAQUE
+local function attack()
+
+	if attacking or finished then
+		return
+	end
+
+	attacking = true
+
+	character = player.Character
+
+	if not character then
+		DP()
+		return
+	end
+
+	humanoid = character:FindFirstChildOfClass("Humanoid")
+	root = character:FindFirstChild("HumanoidRootPart")
+
+	if not humanoid or not root then
+		DP()
+		return
+	end
+
+	-- INMOVILIZAR JUGADOR
+	humanoid.WalkSpeed = 0
+	humanoid.JumpPower = 0
+	humanoid.AutoRotate = false
+
+	-- DAZE PIERDE COLISIÓN AL ATACAR
+	removeCollision()
+
+	for _, object in ipairs(daze:GetDescendants()) do
+		if object:IsA("BasePart") then
+			object.Anchored = true
+			object.CanCollide = false
+		end
+	end
+
+	-- MOVERSE HACIA EL JUGADOR
+	while not finished
+		and daze
+		and daze.Parent
+		and humanoid
+		and humanoid.Health > 0
+		and root
+		and root.Parent do
+
+		local dazePosition = daze:GetPivot().Position
+		local playerPosition = root.Position
+
+		-- SOLO X/Z
+		local current = Vector3.new(
+			dazePosition.X,
+			playerPosition.Y,
+			dazePosition.Z
+		)
+
+		local target = Vector3.new(
+			playerPosition.X,
+			playerPosition.Y,
+			playerPosition.Z
+		)
+
+		local difference = target - current
+		local distance = difference.Magnitude
+
+		-- LLEGÓ AL JUGADOR
+		if distance <= ATTACK_DISTANCE then
+
+			-- JUMPSCARE SOLO AL LLEGAR
+			if jumpscare and jumpscare:IsA("Sound") then
+
+				jumpscare:Play()
+
+				-- HACER DAÑO AL LLEGAR
+				humanoid:TakeDamage(DAMAGE)
+
+				-- ESPERAR A QUE TERMINE EL JUMPSCARE
+				if jumpscare.IsLoaded then
+					jumpscare.Ended:Wait()
+				else
+					task.wait(jumpscare.TimeLength > 0 and jumpscare.TimeLength or 1)
+				end
+
+			else
+				-- Si no existe el sonido, igualmente hace el daño.
+				humanoid:TakeDamage(DAMAGE)
+			end
+
+			-- DEVOLVER MOVIMIENTO DESPUÉS DEL SONIDO
+			if humanoid and humanoid.Parent then
+				humanoid.WalkSpeed = 16
+				humanoid.JumpPower = 50
+				humanoid.AutoRotate = true
+			end
+
+			-- AHORA SÍ DP
+			DP()
+
+			break
+		end
+
+		-- MOVIMIENTO RÁPIDO Y SUAVE
+		if distance > 0 then
+
+			local direction = difference.Unit
+			local deltaTime = RunService.Heartbeat:Wait()
+
+			local movement = math.min(
+				ATTACK_SPEED * deltaTime,
+				distance
+			)
+
+			local newPosition =
+				current + direction * movement
+
+			-- MANTIENE LA MISMA ALTURA
+			newPosition = Vector3.new(
+				newPosition.X,
+				playerPosition.Y,
+				newPosition.Z
+			)
+
+			daze:PivotTo(
+				CFrame.lookAt(
+					newPosition,
+					target
+				)
+			)
+
+		else
+			RunService.Heartbeat:Wait()
+		end
+	end
+end
+
+-- DETECTOR DE MIRADA
+local connection
+
+connection = RunService.RenderStepped:Connect(function(deltaTime)
+
+	if finished then
+		connection:Disconnect()
+		return
+	end
+
+	if attacking then
+		return
+	end
+
+	if isLookingAtDaze() then
+
+		lookTime += deltaTime
+
+		-- 2 SEGUNDOS MIRÁNDOLO
+		if lookTime >= LOOK_TIME then
+			connection:Disconnect()
+			attack()
+		end
+
+	else
+
+		-- DEJÓ DE MIRARLO = DP INMEDIATO
+		connection:Disconnect()
+		DP()
+	end
+end)
+
+-- SI EL JUGADOR MUERE
+humanoid.Died:Connect(function()
+
+	if connection then
+		connection:Disconnect()
+	end
+
+	if not attacking then
+		removeCollision()
+	end
+end)
